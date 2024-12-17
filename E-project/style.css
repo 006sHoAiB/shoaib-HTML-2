@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2? family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;   
+}
+section .imgBx {
+    position: relative;
+    width: 50%;
+    height: 100%;   
+}
+section .imgBx:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background: linear-gradient(225deg,rgb(64, 60, 60),white,black);
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+section .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+     width: 100%;
+     height: 100%; 
+    object-fit: cover;
+    background-color: #484646;
+}
+.formBx{
+    display: none;
+     width: 550px;
+     height: 510px;
+     position: relative;
+     left: 15px;
+     border-radius: 15px;
+     border: 3px solid #00000080;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     backdrop-filter: blur(15px);
+}
+form{ 
+    width:80%;    
+}
+
+h2{
+    font-size: 2em;
+    color: #000000;
+    text-align: center;
+    margin: 24px 0;
+}
+
+.input-box{
+    width: 100%;
+    margin: 48px 0;
+    position: relative;
+    border-bottom: 1px solid #000000;
+}
+
+.input-box label{
+    color: #484646;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size:1em ;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+  top: -5px;
+}
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    color: #000000;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+}
+ .input-box .icon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    color: #000000;
+    transform: translateY(-50%);
+}
+button{
+    width: 100%;
+    height: 45px;
+    background-color: #030303;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 500;
+}
+.contentBx .formBx button:hover{
+    background-color: #828080;
+    color: #fdfbfb;
+    transition: 0.50s;
+}
+.contentBx{
+    height: 100vh;
+    flex: 50%;
+    justify-content: left;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    animation: anim 2.5s linear infinite;
+    
+}
+section .contentBx{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    height: 100vh;
+}
+@media (max-width: 768px){
+    section .imgBx {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    section .contentBx {
+        display: flex
+    ;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
+@media(max-width:600px)
+{
+    section .imgBx {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 112%;
+        height: 111%;
+    }
+}
